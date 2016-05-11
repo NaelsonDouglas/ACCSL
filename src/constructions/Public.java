@@ -2,6 +2,7 @@ package constructions;
 
 public class Public extends Construction{
 	
-	String bidding;
+	String licitationID;
+	String publicOverseer;	
 	
 }

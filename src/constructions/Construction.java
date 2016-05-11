@@ -8,5 +8,7 @@ public abstract class Construction {
 	String license;
 	Date startDate;
 	Date deadline;
+	boolean done;
+	
 	
 }
