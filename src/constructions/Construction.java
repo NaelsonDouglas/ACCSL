@@ -11,4 +11,19 @@ public abstract class Construction {
 	boolean done;
 	
 	
+	
+	public Construction(String client, String license, Date startDate,
+			Date deadline, boolean done) {
+		super();
+		this.client = client;
+		this.license = license;
+		this.startDate = startDate;
+		this.deadline = deadline;
+		this.done = done;
+	}
+	
+	
+	abstract protected Construction makeFactory();
+	
+	
 }
