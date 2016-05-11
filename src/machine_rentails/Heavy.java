@@ -1,5 +1,8 @@
 package machine_rentails;
 
 public class Heavy extends Rentable {
-	boolean needs
+	String id;
+	String driver;
+	Integer license;
+		
 }
