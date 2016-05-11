@@ -16,16 +16,20 @@ public class Industry extends Construction {
 		this.engineerInChargeId = engineerInChargeId;
 	}
 	
-	public Industry Industry(){
-		return null;
+	public Industry(){
+		super();
+		
+		
+	}
+	
+	
+	public Construction Construction(){		
+		Construction output =  new Industry();
+		return output;		
 	}
 	
 
-	@Override
-	protected Construction makeFactory() {
-		
-		return null;
-	}
+	
 
 	
 	

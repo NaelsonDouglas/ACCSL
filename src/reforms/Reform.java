@@ -7,4 +7,8 @@ public abstract class Reform {
 	Date begin;
 	Date end;
 	boolean ocupied;
+	
+	
+	
+	public abstract Reform Reform();
 }

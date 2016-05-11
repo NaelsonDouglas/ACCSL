@@ -7,4 +7,7 @@ public abstract class Resource {
 	String documment;
 	Date bought;
 	boolean avaliable;	
+	
+	
+	public abstract Resource Resource();
 }

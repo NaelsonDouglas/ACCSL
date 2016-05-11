@@ -19,6 +19,23 @@ public class Residence extends Construction {
 		this.grade = grade;
 	}
 	
+	public Residence() {
+		super();
+	
+	}
+
+	@Override
+	
+	public constructions.Construction Construction() {
+		// TODO Auto-generated method stub
+		return new Residence();
+	}
+
+	
+	
+	
+	
+	
 		
 	
 	

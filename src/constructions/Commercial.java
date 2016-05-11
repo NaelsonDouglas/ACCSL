@@ -13,6 +13,18 @@ public class Commercial extends Construction {
 		this.commercialPermitId = commercialPermitId;
 	}
 	
+	public Commercial(){
+		super();
+		this.commercialPermitId = (Integer) null;
+	}
+
+	@Override
+	public	constructions.Construction Construction() {
+		return new Commercial();
+	}
+
+	
+	
 	
 	
 	

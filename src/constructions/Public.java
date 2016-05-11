@@ -12,11 +12,20 @@ public class Public extends Construction{
 		super(client, license, startDate, deadline, done);
 		this.licitationID = licitationID;
 		this.publicOverseer = publicOverseer;
+	}	
+
+	
+	public Public() {
+		super();
+				
 	}
-	
-	
-	
-	
+
+
+	@Override	
+	public constructions.Construction Construction() {
+		return new Public();
+	}
+
 	
 	
 	

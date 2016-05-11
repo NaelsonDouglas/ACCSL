@@ -23,7 +23,12 @@ public abstract class Construction {
 	}
 	
 	
-	abstract protected Construction makeFactory();
+	public Construction() {
+		super();		
+	}
+	
+	
+	public abstract Construction Construction();
 	
 	
 }

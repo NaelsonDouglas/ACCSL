@@ -24,15 +24,17 @@ import constructions.Public;
 
 public class Main {
 	
-	ArrayList<Construction> constructions = new ArrayList<Construction>();
-	ArrayList<Inspection> inspections = new ArrayList<Inspection>();
-	ArrayList<Rentail> rentails = new ArrayList<Rentail>();
-	ArrayList<Optional> optionals = new ArrayList<Optional>();
-	ArrayList<Payment> payments = new ArrayList<Payment>();
-	ArrayList<Reform> reforms = new ArrayList<Reform>();
-	ArrayList<Resource> resources  = new ArrayList<Resource>();
+	static ArrayList<Construction> construction = new ArrayList<Construction>();
+	static ArrayList<Inspection> inspection = new ArrayList<Inspection>();
+	static ArrayList<Rentail> rental = new ArrayList<Rentail>();
+	static ArrayList<Optional> optional = new ArrayList<Optional>();
+	static ArrayList<Payment> payment = new ArrayList<Payment>();
+	static ArrayList<Reform> reform = new ArrayList<Reform>();
+	static ArrayList<Resource> resource  = new ArrayList<Resource>();
 	
-	Object[] variabilities = new Object[]{constructions, inspections,rentails,optionals,payments,reforms, resources};
+	
+	
+	static Object[] variabilities = new Object[]{construction, inspection,rental,optional,payment,reform, resource};
 	
 	
 	
@@ -60,6 +62,9 @@ public class Main {
 	public static void main(String[] args) {
 	
 		
+		constructions.Construction x = new constructions.Industry();
+		machine_rentails.Rentail y = new machine_rentails.Vehicles(); 
+		 
 		
 		
 		
