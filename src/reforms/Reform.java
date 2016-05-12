@@ -1,8 +1,10 @@
 package reforms;
 
+import global.GlobalInterface;
+
 import java.util.Date;
 
-public abstract class Reform {
+public abstract class Reform implements GlobalInterface{
 	String contact;
 	Date begin;
 	Date end;

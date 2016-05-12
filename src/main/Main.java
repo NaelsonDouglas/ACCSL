@@ -8,6 +8,8 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.xml.crypto.Data;
+
 import com.sun.xml.internal.bind.v2.model.core.Ref;
 
 import optionals.Optional;
@@ -38,7 +40,7 @@ public class Main {
 	
 	
 	static Object[] variabilities = new Object[1];
-	
+	static Object[] data = new Object[variabilities.length];
 	
 	
 	
@@ -71,8 +73,8 @@ public class Main {
 		  resources.add(new resources.Building());
 		  resources.add(new resources.Car());
 		  
-		  variabilities = new Object[]{constructions, inspections, rentals, optionals,
-				  payments,reforms, resources};
+		  variabilities = new Object[]{constructions, inspections, rentals, optionals, payments,reforms, resources};
+		  
 	    }  
 	  	  
 	  
@@ -86,18 +88,21 @@ public class Main {
 	  }
 
 	  
-	  static void subMenu(int selector) {
-		  for(int i = 0; i < ((ArrayList) variabilities[selector]).size(); i++) {
-			  Object sublist = ((ArrayList) variabilities[selector]).get(i);
+	  static void subMenu(int selec) {
+		  for(int i = 0; i < ((ArrayList) variabilities[selec]).size(); i++) {
+			  Object sublist = ((ArrayList) variabilities[selec]).get(i);
 			  
 			  System.out.println("[" + i + "] " + sublist.getClass().getSimpleName());
 		  }
 		  
-		  Scanner input = new Scanner(System.in);
 		  
-		  int id = input.nextInt();
 		  
-		  ((ArrayList<Optional>) variabilities[selector]).get(id).menu((ArrayList<Optional>) variabilities[selector]);
+		  Scanner inn_select = new Scanner(System.in);		  
+		  int id = inn_select.nextInt();
+		  
+		   Construction x = ((ArrayList<Construction>) variabilities[selec]).get(id); //usar interface
+		  
+		  
 	  }
 	
 	  
@@ -109,10 +114,13 @@ public class Main {
 		Construction x = new Public("josé", "b", "c", "c", true, "1/1/1", "joão");
 		Construction y = new Residence("João","2342","13/10/2010","25/01/2020",false,"Collor",true,true,"A++");
 		
+		/*
 		while(true) {
+			
+			
 			menu();
 		}
-				
+			*/	
 	}				
 }
 

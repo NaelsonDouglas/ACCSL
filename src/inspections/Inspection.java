@@ -1,8 +1,10 @@
 package inspections;
 
+import global.GlobalInterface;
+
 import java.util.Date;
 
-public abstract class Inspection {
+public abstract class Inspection implements GlobalInterface{
 	String address;
 	boolean approved;
 	boolean open; //is the inspection still in analysis?
@@ -22,7 +24,7 @@ public abstract class Inspection {
 	}
 	
 	public String toString() {
-		return "Endereço: " + address + "\nAprovado: " + approved +
+		return "Endereï¿½o: " + address + "\nAprovado: " + approved +
 				"\nAberta: " + open + "\nData: " + date;
 	}
 	

@@ -1,8 +1,10 @@
 package optionals;
 
+import global.GlobalInterface;
+
 import java.util.ArrayList;
 
-public abstract class Optional {
+public abstract class Optional implements GlobalInterface{
 	String owner;
 
 	public Optional(String owner) {

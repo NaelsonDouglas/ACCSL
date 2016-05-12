@@ -1,8 +1,10 @@
 package resources;
 
+import global.GlobalInterface;
+
 import java.util.Date;
 
-public abstract class Resource {
+public abstract class Resource implements GlobalInterface{
 	String name;
 	String documment;
 	Date bought;

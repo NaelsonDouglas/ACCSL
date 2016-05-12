@@ -1,8 +1,10 @@
 package constructions;
 
+import global.GlobalInterface;
+
 import java.util.Date;
 
-public abstract class Construction {
+public abstract class Construction implements GlobalInterface {
 	
 	String client;
 	String license;
