@@ -1,16 +1,15 @@
 package resources;
 
+import java.util.Scanner;
+
+import global.GlobalInterface;
+
 public class Car extends Resource {
 	String plate;
-	String fuel;
-	boolean functional;
-	int garage_id;
-	public Car(String plate, String fuel, boolean functional, int garage_id) {
+	
+	public Car(String plate) {
 		super();
 		this.plate = plate;
-		this.fuel = fuel;
-		this.functional = functional;
-		this.garage_id = garage_id;
 	}
 	public Car() {
 		super();
@@ -21,9 +20,31 @@ public class Car extends Resource {
 	}
 	@Override
 	public String toString() {
-		return super.toString()+"\nPlaca: " + plate + "\nGasolina: " + fuel + "\nFuncional: "
-				+ functional + "\nGaragem: " + garage_id + "]";
-	}	
+		return super.toString()+"\nPlaca: " + plate ;
+	}
+	@Override
+	public GlobalInterface create() {
+		Car output = new Car();
+		output.superSet();
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Placa: ");
+		setPlate(scan.next());
+		
+		
+		
+		
+		return output;
+	}
+	
+	
+	
+	public String getPlate() {
+		return plate;
+	}
+	public void setPlate(String plate) {
+		this.plate = plate;
+	}
 	
 	
 	

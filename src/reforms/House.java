@@ -1,9 +1,13 @@
 package reforms;
 
-public class House extends Reform {
-	boolean noiseRestritive;
+import java.util.Scanner;
 
-	public House(boolean noiseRestritive) {
+import global.GlobalInterface;
+
+public class House extends Reform {
+	String noiseRestritive;
+
+	public House(String noiseRestritive) {
 		super();
 		this.noiseRestritive = noiseRestritive;
 	}
@@ -20,7 +24,27 @@ public class House extends Reform {
 	@Override
 	public String toString() {
 		return super.toString()+"\nNoise Restritive: " + noiseRestritive;
+	}
+
+	
+	@Override
+	public GlobalInterface create() {
+
+		House output = new House();
+		output.superSet();
+		Scanner scan = new Scanner(System.in);	
+		output.setNoiseRestritive(scan.next());
+		return output;
+	}
+
+	public String isNoiseRestritive() {
+		return noiseRestritive;
+	}
+
+	public void setNoiseRestritive(String noiseRestritive) {
+		this.noiseRestritive = noiseRestritive;
 	}	
+	
 	
 	
 	

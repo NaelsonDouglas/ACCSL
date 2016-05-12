@@ -1,9 +1,13 @@
 package reforms;
 
-public class Commercial extends Reform {
-	boolean weekend;
+import java.util.Scanner;
 
-	public Commercial(boolean weekend) {
+import global.GlobalInterface;
+
+public class Commercial extends Reform {
+	Integer weekend;
+
+	public Commercial(Integer weekend) {
 		super();
 		this.weekend = weekend;
 	}
@@ -21,6 +25,29 @@ public class Commercial extends Reform {
 	public String toString() {
 		return super.toString()+"Trabalhoem fim de semana: " + weekend;
 	}
+
+	@Override
+	public GlobalInterface create() {
+		Commercial output = new Commercial();
+		output.superSet();
+		
+		Scanner scan = new Scanner(System.in);	
+		output.setWeekend(scan.nextInt());
+		
+		
+		return output;
+	}
+
+	public Integer getWeekend() {
+		return weekend;
+	}
+
+	public void setWeekend(Integer weekend) {
+		this.weekend = weekend;
+	}
+	
+	
+	
 	
 	
 	

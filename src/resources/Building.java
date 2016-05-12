@@ -1,14 +1,16 @@
 package resources;
 
+import java.util.Scanner;
+
+import global.GlobalInterface;
+
 public class Building extends Resource {
 	String address;
-	String dimensions;
-	boolean rented;
-	public Building(String address, String dimensions, boolean rented) {
+	Integer dimensions;
+	public Building(String address, Integer dimensions) {
 		super();
 		this.address = address;
 		this.dimensions = dimensions;
-		this.rented = rented;
 	}
 	public Building() {
 		super();
@@ -19,8 +21,36 @@ public class Building extends Resource {
 	}
 	@Override
 	public String toString() {
-		return super.toString()+"\nEndereço: " + address + "\nÁrea: " + dimensions
-				+ "\nALugada: " + rented + "]";
+		return super.toString()+"\nEndereço: " + address + "\nÁrea: " + dimensions;
+	}
+	@Override
+	public GlobalInterface create() {
+		Scanner scan = new Scanner(System.in);
+		
+		
+		Building output = new Building();
+		
+		System.out.println("Enderenço: ");
+		setAvaliable(scan.next());
+		
+		System.out.println("Área: ");
+		setDimensions(scan.nextInt());
+		return output;
+	}
+	
+	
+	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public Integer getDimensions() {
+		return dimensions;
+	}
+	public void setDimensions(Integer dimensions) {
+		this.dimensions = dimensions;
 	}	
 	
 	

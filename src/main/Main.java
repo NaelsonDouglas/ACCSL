@@ -14,6 +14,7 @@ import javax.xml.crypto.Data;
 import com.sun.xml.internal.bind.v2.model.core.Ref;
 
 import optionals.Optional;
+import payments.Money;
 import payments.Payment;
 import reforms.Commercial;
 import reforms.Industry;
@@ -113,9 +114,8 @@ public class Main {
 		createMenu();
 		
 		
-		GlobalInterface p =new constructions.Commercial();	
-		GlobalInterface x = p.create();
-		
+		GlobalInterface p = new Money();	
+		GlobalInterface x = p.create();		
 		
 		System.out.println(x.toString());		
 	}				

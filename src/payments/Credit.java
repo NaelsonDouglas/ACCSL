@@ -1,9 +1,13 @@
 package payments;
 
-public class Credit extends Payment {
-	boolean international;
+import java.util.Scanner;
 
-	public Credit(String from, Float amount, boolean international) {
+import global.GlobalInterface;
+
+public class Credit extends Payment {
+	String international;
+
+	public Credit(String from, Integer amount, String  international) {
 		super(from, amount);
 		this.international = international;
 	}
@@ -20,6 +24,27 @@ public class Credit extends Payment {
 	@Override
 	public String toString() {
 		return super.toString()+"\nInternational: " + international + "]";
+	}
+
+	
+	
+	
+	
+	public String  isInternational() {
+		return international;
+	}
+
+	public void setInternational(String  international) {
+		this.international = international;
+	}
+
+	@Override
+	public GlobalInterface create() {
+		Credit output = new Credit();
+		Scanner scan = new Scanner(System.in);	
+		System.out.println("Credit Card: ");
+		setInternational(scan.next());		
+		return output;
 	}
 	
 	
