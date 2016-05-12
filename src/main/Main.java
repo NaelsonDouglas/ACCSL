@@ -2,7 +2,11 @@ package main;
 
 import inspections.Inspection;
 
+<<<<<<< HEAD
 import java.awt.Menu;
+=======
+import java.io.Console;
+>>>>>>> 7060f4087dbeddef42ba535fe9f2b27c7c1e1bf0
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -26,13 +30,13 @@ import constructions.Residence;
 
 public class Main {
 	
-	static ArrayList<Construction> constructions = new ArrayList<Construction>();
-	static ArrayList<Inspection> inspections = new ArrayList<Inspection>();
-	static ArrayList<Rentail> rentals = new ArrayList<Rentail>();
-	static ArrayList<Optional> optionals = new ArrayList<Optional>();
-	static ArrayList<Payment> payments = new ArrayList<Payment>();
-	static ArrayList<Reform> reforms = new ArrayList<Reform>();
-	static ArrayList<Resource> resources  = new ArrayList<Resource>();
+	public static ArrayList<Construction> constructions = new ArrayList<Construction>();
+	public static ArrayList<Inspection> inspections = new ArrayList<Inspection>();
+	public static ArrayList<Rentail> rentals = new ArrayList<Rentail>();
+	public static ArrayList<Optional> optionals = new ArrayList<Optional>();
+	public static ArrayList<Payment> payments = new ArrayList<Payment>();
+	public static ArrayList<Reform> reforms = new ArrayList<Reform>();
+	public static ArrayList<Resource> resources  = new ArrayList<Resource>();
 	
 	
 	
@@ -71,6 +75,7 @@ public class Main {
 		  resources.add(new resources.Car());
 		  
 		  variabilities = new Object[]{constructions, inspections, rentals, optionals,
+<<<<<<< HEAD
 				  payments,reforms, resources};
 	    }  
 	  
@@ -93,14 +98,52 @@ public class Main {
 	
 	 
 	 
+=======
+				  payments, reforms, resources};
+	    }
+	  
+	  
+	  static void menu() {
+		  
+		  for(int i = 0; i < variabilities.length; i++) {
+			  System.out.println(i + " " + getPackageName(((ArrayList) variabilities[i]).get(0)));
+		  }
+		  
+		  Scanner input = new Scanner(System.in); 
+		  subMenu(input.nextInt());
+		  
+	  }
+	  
+	  
+	  static void subMenu(int selector) {
+		  for(int i = 0; i < ((ArrayList) variabilities[selector]).size(); i++) {
+			  Object sublist = ((ArrayList) variabilities[selector]).get(i);
+			  
+			  System.out.println(i + " " + sublist.getClass().getSimpleName());
+		  }
+		  
+		  Scanner input = new Scanner(System.in);
+		  
+		  int id = input.nextInt();
+		  
+		  ((ArrayList<Optional>) variabilities[selector]).get(id).menu((ArrayList<Optional>) variabilities[selector]);
+	  }
+>>>>>>> 7060f4087dbeddef42ba535fe9f2b27c7c1e1bf0
 	
+	  
 	public static void main(String[] args) {
 	
 		createMenu();
+<<<<<<< HEAD
 		//menu();		
 		//submenu(0);
 		Construction x = new Public("josé", "b", "c", "c", true, "1/1/1", "joão");
 		Construction y = new Residence("João","2342","13/10/2010","25/01/2020",false,"Collor",true,true,"A++");
+=======
+		while(true) {
+			menu();
+		}
+>>>>>>> 7060f4087dbeddef42ba535fe9f2b27c7c1e1bf0
 		
 
 		Integer a = 1;
