@@ -2,11 +2,8 @@ package main;
 
 import inspections.Inspection;
 
-<<<<<<< HEAD
 import java.awt.Menu;
-=======
 import java.io.Console;
->>>>>>> 7060f4087dbeddef42ba535fe9f2b27c7c1e1bf0
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
