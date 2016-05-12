@@ -1,5 +1,6 @@
 package main;
 
+import global.GlobalInterface;
 import inspections.Inspection;
 
 import java.awt.Menu;
@@ -14,6 +15,7 @@ import com.sun.xml.internal.bind.v2.model.core.Ref;
 
 import optionals.Optional;
 import payments.Payment;
+import reforms.Commercial;
 import reforms.Industry;
 import reforms.Reform;
 import resources.Resource;
@@ -109,18 +111,13 @@ public class Main {
 	public static void main(String[] args) {
 	
 		createMenu();
-		//menu();		
-		//submenu(0);
-		Construction x = new Public("josé", "b", "c", "c", true, "1/1/1", "joão");
-		Construction y = new Residence("João","2342","13/10/2010","25/01/2020",false,"Collor",true,true,"A++");
 		
-		/*
-		while(true) {
-			
-			
-			menu();
-		}
-			*/	
+		
+		GlobalInterface p =new constructions.Commercial();	
+		GlobalInterface x = p.create();
+		
+		
+		System.out.println(x.toString());		
 	}				
 }
 

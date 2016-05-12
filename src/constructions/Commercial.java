@@ -1,5 +1,9 @@
 package constructions;
 
+import java.util.Scanner;
+
+import global.GlobalInterface;
+
 public class Commercial extends Construction {
 	
 	int commercialPermitId;
@@ -25,6 +29,34 @@ public class Commercial extends Construction {
 		return super.toString()+"\nPermissão comercial: " + commercialPermitId;
 	}
 
+	@Override
+	public GlobalInterface create() {
+
+		 Scanner scan = new Scanner(System.in);
+		 String client,license,startDate,deadline;
+		 int commercialPermit;
+		 
+		 Commercial output = new Commercial();
+		 output.superSet();	 
+		 
+		 System.out.println("Permit ID: ");
+		 commercialPermit = scan.nextInt();
+		 
+		 output.setCommercialPermitId(commercialPermit);
+		 
+		 return output;
+	}
+
+	
+	public int getCommercialPermitId() {
+		return commercialPermitId;
+	}
+
+	public void setCommercialPermitId(int commercialPermitId) {
+		this.commercialPermitId = commercialPermitId;
+	}
+
+	
 	
 	
 	
