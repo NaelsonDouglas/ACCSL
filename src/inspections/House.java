@@ -31,11 +31,8 @@ public class House extends Inspection {
 		 House output = new House();
 		 output.superSet();	 
 		 
-		 System.out.println("Dono: ");
-		 owner = scan.next();
-		 
-		 output.setOwner(owner);
-		 
+		 System.out.println("Dono: ");	 
+		 output.setOwner(scan.next());		 
 		 return output;
 	}
 	

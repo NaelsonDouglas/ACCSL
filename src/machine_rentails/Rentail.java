@@ -1,21 +1,22 @@
 package machine_rentails;
 
-import java.util.Date;
+import global.GlobalInterface;
 
-public abstract  class Rentail{
-	Date start;
-	Date end;
-	Integer clientID;
+import java.util.Date;
+import java.util.Scanner;
+
+public abstract  class Rentail implements GlobalInterface{
+	String start;
+	String end;
 	String clientName;
 	
 	
 	
 	
-	public Rentail(Date start, Date end, Integer clientID, String clientName) {
+	public Rentail(String start, String end, String clientName) {
 		super();
 		this.start = start;
 		this.end = end;
-		this.clientID = clientID;
 		this.clientName = clientName;
 	}
 
@@ -29,8 +30,57 @@ public abstract  class Rentail{
 
 	@Override
 	public String toString() {
-		return "Start: " + start + "\n End: " + end + "\nClient ID: "
-				+ clientID + "\n Client name: " + clientName;
+		return "Start: " + start + "\n End: " + end + "\n Client name: " + clientName;
+	}
+
+	public void superSet(){
+		
+		Scanner scan = new Scanner(System.in);	
+		
+		System.out.println("Cliente");
+		setClientName(scan.next());
+		System.out.println("Começo: ");
+		setStart(scan.next());
+		
+		System.out.println("Fim: ");
+		setEnd(scan.next());
+	}
+
+
+	public String getStart() {
+		return start;
+	}
+
+
+
+	public void setStart(String start) {
+		this.start = start;
+	}
+
+
+
+	public String getEnd() {
+		return end;
+	}
+
+
+
+	public void setEnd(String end) {
+		this.end = end;
+	}
+
+
+
+	
+
+	public String getClientName() {
+		return clientName;
+	}
+
+
+
+	public void setClientName(String clientName) {
+		this.clientName = clientName;
 	}
 
 
