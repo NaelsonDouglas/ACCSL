@@ -1,32 +1,55 @@
 package inspections;
 
 import java.util.Date;
+import java.util.Scanner;
+
+import global.GlobalInterface;
 
 public class House extends Inspection {
 	String owner;
-	boolean occupied; //Is there anyone living in the  house?
-	public House(String address, boolean approved, boolean open, Date date,
-			String owner, boolean ocupied) {
-		super(address, approved, open, date);
+
+	public House(String address,  String date,
+			String owner) {
+		super(address, date);
 		this.owner = owner;
-		this.occupied = ocupied;
 	}
-	
 	
 	
 	public House() {
 		super();
 	}
 
-
-
-	public House(String address, boolean approved, boolean open, Date date) {
-		super(address, approved, open, date);
-	}
-
 	public String toString() {
-		return super.toString() + "\nDono: " + owner + "\nOcupada: " + occupied;
+		return super.toString() + "\nDono: " + owner;
 	}
+
+	public GlobalInterface create() {
+
+		 Scanner scan = new Scanner(System.in);
+		 String owner;
+		 
+		 House output = new House();
+		 output.superSet();	 
+		 
+		 System.out.println("Dono: ");
+		 owner = scan.next();
+		 
+		 output.setOwner(owner);
+		 
+		 return output;
+	}
+	
+	public String getOwner() {
+		return owner;
+	}
+
+
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+
 
 	@Override
 	public inspections.Inspection Inspection() {

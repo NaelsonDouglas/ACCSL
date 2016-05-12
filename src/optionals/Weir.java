@@ -3,6 +3,9 @@ package optionals;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import global.GlobalInterface;
+import inspections.Public;
+
 public class Weir extends Optional {
 	Float length;
 	Float width;
@@ -17,62 +20,54 @@ public class Weir extends Optional {
 		super();
 	}
 	
+	public String toString() {
+		return super.toString() + "\nComprimento: " + length + "\nLargura: " +
+				width + "Profundidade: " + deepness;
+	}
+	
+	public GlobalInterface create() {
+
+		 Scanner scan = new Scanner(System.in);
+		 Float length, width, deepness;
+		 
+		 Weir output = new Weir();
+		 output.superSet();	 
+		 
+		 System.out.println("Comprimento: ");
+		 length = scan.nextFloat();
+		 System.out.println("Largura: ");
+		 width = scan.nextFloat();
+		 System.out.println("Profundidade: ");
+		 deepness = scan.nextFloat();		 
+		 
+		 output.setLength(length);
+		 output.setWidth(width);
+		 output.setDeepness(deepness);
+		 
+		 return output;
+	}
+	
+	public Float getLength() {
+		return length;
+	}
+	public void setLength(Float length) {
+		this.length = length;
+	}
+	public Float getWidth() {
+		return width;
+	}
+	public void setWidth(Float width) {
+		this.width = width;
+	}
+	public Float getDeepness() {
+		return deepness;
+	}
+	public void setDeepness(Float deepness) {
+		this.deepness = deepness;
+	}
 	@Override
 	public optionals.Optional Optional() {
 		return new Weir();
 	}	
 	
-	public void menu(ArrayList<Optional> arrayList) {
-		System.out.println("[0] Adicionar");
-		System.out.println("[1] Listar");
-		System.out.println("[2] Remover");
-		
-		Scanner input = new Scanner(System.in);
-		int selector = input.nextInt();
-		input.nextLine();
-		
-		switch (selector) {
-		case 0: 
-			System.out.println("Owner:");
-			String owner = input.nextLine();
-			System.out.println("Length:");
-			float lenght = input.nextFloat();
-			System.out.println("Width:");
-			float width = input.nextFloat();
-			System.out.println("Deepness:");
-			float deepness = input.nextFloat();
-			Weir weir = new Weir(owner, lenght, width, deepness);
-			arrayList.add(weir);
-			break;
-
-		case 1:
-			Optional optional;
-			for(int i = 0; i < arrayList.size(); i++) {
-				optional = arrayList.get(i);
-				
-				if(!(optional instanceof Weir))
-					continue;
-				
-				if(optional.owner == null)
-					continue;
-				
-				weir = (Weir) arrayList.get(i);
-				
-				System.out.println("=========================");
-				System.out.println("Owner: " + weir.owner);
-				System.out.println("Length: " + weir.length);
-				System.out.println("Width: " + weir.width);
-				System.out.println("Deepness: " + weir.deepness);
-				System.out.println("=========================");
-			}
-			break;
-		case 2:
-			System.out.println("ID:");
-			int id = input.nextInt();
-			arrayList.remove(id);
-			break;
-		default:
-			break;
-		}
-	}
 }

@@ -1,11 +1,13 @@
 package inspections;
 
 import java.util.Date;
+import java.util.Scanner;
+
+import global.GlobalInterface;
 
 public class Industry extends Inspection {
 	String engineerInCharge;
-	boolean interditative; //Is there any need to stop the industry to call the inspection?
-	Integer governementPermition;
+	Integer governmentPermition;
 	
 	
 	public Industry() {
@@ -13,20 +15,58 @@ public class Industry extends Inspection {
 	}
 
 
-	public Industry(String address, boolean approved, boolean open, Date date,
+	public Industry(String address, String date,
 			String engineerInCharge, boolean interditative,
 			Integer governementPermition) {
-		super(address, approved, open, date);
+		super(address, date);
 		this.engineerInCharge = engineerInCharge;
-		this.interditative = interditative;
-		this.governementPermition = governementPermition;
+		this.governmentPermition = governementPermition;
 	}
 
 	public String toString() {
 		return super.toString() + "\nEngenheiro responsável: " + engineerInCharge +
-				"\nInderditável: " + interditative + "\nAlvará do governo: " + 
-				governementPermition;
+				"\nAlvará do governo: " + governmentPermition;
 	}
+
+	public GlobalInterface create() {
+
+		 Scanner scan = new Scanner(System.in);
+		 String engineerInCharge;
+		 Integer governmentPermission;
+		 
+		 Industry output = new Industry();
+		 output.superSet();	 
+		 
+		 System.out.println("Engenheiro responsável: ");
+		 engineerInCharge = scan.next();
+		 System.out.println("Alvará: ");
+		 governmentPermission = scan.nextInt();
+		 
+		 output.setEngineerInCharge(engineerInCharge);
+		 output.setGovernmentPermition(governmentPermission);
+		 
+		 return output;
+	}
+	
+	public String getEngineerInCharge() {
+		return engineerInCharge;
+	}
+
+
+	public void setEngineerInCharge(String engineerInCharge) {
+		this.engineerInCharge = engineerInCharge;
+	}
+
+
+	public Integer getGovernmentPermition() {
+		return governmentPermition;
+	}
+
+
+	public void setGovernmentPermition(Integer governmentPermition) {
+		this.governmentPermition = governmentPermition;
+	}
+
 
 	@Override
 	public inspections.Inspection Inspection() {
