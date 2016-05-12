@@ -15,7 +15,7 @@ import reforms.Reform;
 import resources.Resource;
 
 import machine_rentails.Rentail;
-import machine_rentails.Vehicles;
+import machine_rentails.Vehicle;
 
 import constructions.Construction;
 import constructions.Public;
@@ -53,7 +53,7 @@ public class Main {
 	        Scanner input = new Scanner(System.in);      
 	        System.out.println("Choose from these choices");   
 	        selection = input.nextInt();
-	        return selection;    
+	        return selection;
 	    }
 	  
 	  
@@ -63,11 +63,13 @@ public class Main {
 	
 		
 		constructions.Construction x = new constructions.Industry();
-		machine_rentails.Rentail y = new machine_rentails.Vehicles(); 
+		machine_rentails.Rentail y = new machine_rentails.Vehicle(); 
 		 
 		
 		
-		
+		for (int i = 0; i < variabilities.length; i++){
+			((ArrayList<Construction>) variabilities[1]).get(1);
+		}
 	
 		
 		

@@ -25,10 +25,5 @@ public abstract  class Rentail{
 		super();
 	}
 
-
-
-
-
-
 	public abstract Rentail Rentail();
 }
