@@ -18,7 +18,15 @@ public class Car extends Resource {
 	@Override
 	public resources.Resource Resource() {
 		return new Car();
+	}
+	@Override
+	public String toString() {
+		return super.toString()+"\nPlaca: " + plate + "\nGasolina: " + fuel + "\nFuncional: "
+				+ functional + "\nGaragem: " + garage_id + "]";
 	}	
+	
+	
+	
 	
 	
 	

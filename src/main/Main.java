@@ -2,6 +2,7 @@ package main;
 
 import inspections.Inspection;
 
+import java.awt.Menu;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -19,6 +20,7 @@ import machine_rentails.Vehicle;
 
 import constructions.Construction;
 import constructions.Public;
+import constructions.Residence;
 
 
 
@@ -44,8 +46,7 @@ public class Main {
 	}
 	
 	
-	
-	
+	 
 	
 	  public static void createMenu() {
 		  constructions.add(new constructions.Industry());
@@ -71,23 +72,44 @@ public class Main {
 		  
 		  variabilities = new Object[]{constructions, inspections, rentals, optionals,
 				  payments,reforms, resources};
-	    }
+	    }  
 	  
 	  
 	  
+	  
+	  static void menu() {
+		  for(int i = 0; i < variabilities.length; i++) {
+			  System.out.println("[" + i + "] " + getPackageName(((ArrayList) variabilities[i]).get(0)));
+		  }
+	  }
+	  
+	  static void submenu(int selector){
+		  
+		  for (int i=0; i<((ArrayList<Object>) variabilities[selector]).size(); i++){
+			  Object sublist = ((ArrayList<Construction>) variabilities[selector]).get(i);			  
+			  System.out.println("[" + i + "] " + sublist.getClass().getSimpleName());
+		  }
+	  }
+	
+	 
+	 
 	
 	public static void main(String[] args) {
 	
 		createMenu();
-	
+		//menu();		
+		//submenu(0);
+		Construction x = new Public("josé", "b", "c", "c", true, "1/1/1", "joão");
+		Construction y = new Residence("João","2342","13/10/2010","25/01/2020",false,"Collor",true,true,"A++");
 		
-		
-		
-		
-		
-		
-		
-		
-    }
 
+		Integer a = 1;
+		if(a instanceof Integer)
+		{
+			System.out.println("meme");
+		}
+			
+	}				
 }
+
+

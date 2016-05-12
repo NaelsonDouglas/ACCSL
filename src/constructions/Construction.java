@@ -6,23 +6,31 @@ public abstract class Construction {
 	
 	String client;
 	String license;
-	Date startDate;
-	Date deadline;
+	String startDate;
+	String deadline;
 	boolean done;
 	
 	
 	
-	public Construction(String client, String license, Date startDate,
-			Date deadline, boolean done) {
+	public Construction(String client, String license, String startDate2,
+			String deadline2, boolean done) {
 		super();
 		this.client = client;
 		this.license = license;
-		this.startDate = startDate;
-		this.deadline = deadline;
+		this.startDate = startDate2;
+		this.deadline = deadline2;
 		this.done = done;
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Cliente: " + client + "\nLicença: " + license
+				+ "\nInício: " + startDate + "\nFim: " + deadline
+				+ "\nCompleta: " + done;
+	}
+
+
 	public Construction() {
 		super();		
 	}

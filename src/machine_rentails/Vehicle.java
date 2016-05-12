@@ -20,6 +20,11 @@ public class Vehicle extends Rentail {
 	public machine_rentails.Rentail Rentail() {
 		return new Vehicle();
 	}
+	@Override
+	public String toString() {
+		return super.toString()+"Plate: " + plate + "\nDoors: " + doors + "\nPickup: "
+				+ pickup;
+	}
 	
 	
 	

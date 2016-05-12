@@ -16,6 +16,12 @@ public class Public extends Reform {
 	public reforms.Reform Reform() {
 		return new Public();
 	}
+
+	@Override
+	public String toString() {
+		return super.toString()+"\nLicitação: " + licitation;
+	}
+	
 	
 	
 	

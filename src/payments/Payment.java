@@ -13,4 +13,10 @@ public abstract class Payment {
 	}
 	
 	public abstract Payment Payment();
+	@Override
+	public String toString() {
+		return "From: " + from + "\nAmount: " + amount;
+	}
+	
+	
 }

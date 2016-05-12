@@ -16,6 +16,11 @@ public class Building extends Resource {
 	@Override
 	public resources.Resource Resource() {
 		return new Building();
+	}
+	@Override
+	public String toString() {
+		return super.toString()+"\nEndereço: " + address + "\nÁrea: " + dimensions
+				+ "\nALugada: " + rented + "]";
 	}	
 	
 	

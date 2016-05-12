@@ -20,6 +20,11 @@ public class Heavy extends Rentail {
 	public machine_rentails.Rentail Rentail() {
 		return new Heavy();
 	}
+	@Override
+	public String toString() {
+		return this.toString()+"\nHeavy: " + id + "\nDriver" + driver + "\nLicence: "
+				+ license;
+	}
 	
 	
 	

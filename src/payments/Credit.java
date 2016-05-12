@@ -16,6 +16,11 @@ public class Credit extends Payment {
 	public payments.Payment Payment() {
 		return new Credit();
 	}
+
+	@Override
+	public String toString() {
+		return super.toString()+"\nInternational: " + international + "]";
+	}
 	
 	
 	

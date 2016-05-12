@@ -16,6 +16,11 @@ public class Commercial extends Reform {
 	public reforms.Reform Reform() {
 		return new Commercial();
 	}
+
+	@Override
+	public String toString() {
+		return super.toString()+"Trabalhoem fim de semana: " + weekend;
+	}
 	
 	
 	

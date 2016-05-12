@@ -24,6 +24,16 @@ public abstract  class Rentail{
 	public Rentail() {
 		super();
 	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Start: " + start + "\n End: " + end + "\nClient ID: "
+				+ clientID + "\n Client name: " + clientName;
+	}
+
+
 
 	public abstract Rentail Rentail();
 }

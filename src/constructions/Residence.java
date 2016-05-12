@@ -9,8 +9,8 @@ public class Residence extends Construction {
 	boolean pool;
 	String grade; //grade A, B, C or D -- It is a way to classifie the value of houses
 	
-	public Residence(String client, String license, Date startDate,
-			Date deadline, boolean done, String owner, boolean garage,
+	public Residence(String client, String license, String startDate,
+			String deadline, boolean done, String owner, boolean garage,
 			boolean pool, String grade) {
 		super(client, license, startDate, deadline, done);
 		this.owner = owner;
@@ -29,6 +29,12 @@ public class Residence extends Construction {
 	public constructions.Construction Construction() {
 		// TODO Auto-generated method stub
 		return new Residence();
+	}
+
+	@Override
+	public String toString() {
+		return super.toString()+"\nOwner: " + owner + "\nGarate: " + garage + "\nPool: "
+				+ pool + "\nGrade: " + grade;
 	}
 
 	

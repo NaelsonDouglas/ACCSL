@@ -15,6 +15,11 @@ public class House extends Reform {
 	@Override
 	public reforms.Reform Reform() {
 		return new House();
+	}
+
+	@Override
+	public String toString() {
+		return super.toString()+"\nNoise Restritive: " + noiseRestritive;
 	}	
 	
 	

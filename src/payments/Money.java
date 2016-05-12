@@ -16,6 +16,13 @@ public class Money extends Payment{
 	public payments.Payment Payment() {
 		return new Money();
 	}
+
+	@Override
+	public String toString() {
+		return super.toString()+"\nCentral Bank note: " + centralBankNote;
+	}
+	
+	
 	
 	
 	

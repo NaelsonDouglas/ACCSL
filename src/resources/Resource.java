@@ -9,5 +9,16 @@ public abstract class Resource {
 	boolean avaliable;	
 	
 	
+	
+	
+	@Override
+	public String toString() {
+		return "Nome: " + name + "Documento: " + documment
+				+ "Data Compra: " + bought + "\nDisponível: " + avaliable + "]";
+	}
+
+
+
+
 	public abstract Resource Resource();
 }

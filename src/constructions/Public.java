@@ -2,12 +2,14 @@ package constructions;
 
 import java.util.Date;
 
+import com.sun.org.apache.bcel.internal.generic.GETSTATIC;
+
 public class Public extends Construction{
 	
 	String licitationID;
 	String publicOverseer;
 	
-	public Public(String client, String license, Date startDate, Date deadline,
+	public Public(String client, String license, String startDate, String deadline,
 			boolean done, String licitationID, String publicOverseer) {
 		super(client, license, startDate, deadline, done);
 		this.licitationID = licitationID;
@@ -15,6 +17,40 @@ public class Public extends Construction{
 	}	
 
 	
+	
+
+
+
+
+
+	@Override
+	public String toString() {
+		return super.toString()+"\nLicitação: " + licitationID + "\nSupervisor Público: "
+				+ publicOverseer;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public Public() {
 		super();
 				

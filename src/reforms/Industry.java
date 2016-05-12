@@ -16,6 +16,13 @@ public class Industry extends Reform {
 	public reforms.Reform Reform() {
 		return new Industry();
 	}
+
+	@Override
+	public String toString() {
+		return this.toString()+"\nHeavy Machinery: " + heavyMachinery;
+	}
+	
+	
 	
 	
 }

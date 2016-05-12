@@ -7,8 +7,8 @@ public class Industry extends Construction {
 	boolean chemical;
 	int engineerInChargeId;
 	
-	public Industry(String client, String license, Date startDate,
-			Date deadline, boolean done, boolean highPower, boolean chemical,
+	public Industry(String client, String license, String startDate,
+			String deadline, boolean done, boolean highPower, boolean chemical,
 			int engineerInChargeId) {
 		super(client, license, startDate, deadline, done);
 		this.highPower = highPower;
@@ -26,6 +26,12 @@ public class Industry extends Construction {
 	public Construction Construction(){		
 		Construction output =  new Industry();
 		return output;		
+	}
+
+	@Override
+	public String toString() {
+		return super.toString()+"High power: " + highPower + "\nChemical: " + chemical
+				+ "\nEngineer in charge: " + engineerInChargeId + "]";
 	}
 	
 
