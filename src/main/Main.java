@@ -24,17 +24,17 @@ import constructions.Public;
 
 public class Main {
 	
-	static ArrayList<Construction> construction = new ArrayList<Construction>();
-	static ArrayList<Inspection> inspection = new ArrayList<Inspection>();
-	static ArrayList<Rentail> rental = new ArrayList<Rentail>();
-	static ArrayList<Optional> optional = new ArrayList<Optional>();
-	static ArrayList<Payment> payment = new ArrayList<Payment>();
-	static ArrayList<Reform> reform = new ArrayList<Reform>();
-	static ArrayList<Resource> resource  = new ArrayList<Resource>();
+	static ArrayList<Construction> constructions = new ArrayList<Construction>();
+	static ArrayList<Inspection> inspections = new ArrayList<Inspection>();
+	static ArrayList<Rentail> rentals = new ArrayList<Rentail>();
+	static ArrayList<Optional> optionals = new ArrayList<Optional>();
+	static ArrayList<Payment> payments = new ArrayList<Payment>();
+	static ArrayList<Reform> reforms = new ArrayList<Reform>();
+	static ArrayList<Resource> resources  = new ArrayList<Resource>();
 	
 	
 	
-	static Object[] variabilities = new Object[]{construction, inspection,rental,optional,payment,reform, resource};
+	static Object[] variabilities = new Object[1];
 	
 	
 	
@@ -47,13 +47,30 @@ public class Main {
 	
 	
 	
-	  public static int menu() {
-
-	        int selection;
-	        Scanner input = new Scanner(System.in);      
-	        System.out.println("Choose from these choices");   
-	        selection = input.nextInt();
-	        return selection;
+	  public static void createMenu() {
+		  constructions.add(new constructions.Industry());
+		  constructions.add(new constructions.Commercial());
+		  constructions.add(new constructions.Public());
+		  constructions.add(new constructions.Residence());
+		  inspections.add(new inspections.Commercial());
+		  inspections.add(new inspections.House());
+		  inspections.add(new inspections.Industry());
+		  inspections.add(new inspections.Public());
+		  rentals.add(new machine_rentails.Heavy());
+		  rentals.add(new machine_rentails.Vehicle());
+		  optionals.add(new optionals.Weir());
+		  optionals.add(new optionals.Well());
+		  payments.add(new payments.Credit());
+		  payments.add(new payments.Money());
+		  reforms.add(new reforms.Commercial());
+		  reforms.add(new reforms.House());
+		  reforms.add(new reforms.Industry());
+		  reforms.add(new reforms.Public());
+		  resources.add(new resources.Building());
+		  resources.add(new resources.Car());
+		  
+		  variabilities = new Object[]{constructions, inspections, rentals, optionals,
+				  payments,reforms, resources};
 	    }
 	  
 	  
@@ -61,15 +78,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 	
-		
-		constructions.Construction x = new constructions.Industry();
-		machine_rentails.Rentail y = new machine_rentails.Vehicle(); 
-		 
-		
-		
-		for (int i = 0; i < variabilities.length; i++){
-			((ArrayList<Construction>) variabilities[1]).get(1);
-		}
+		createMenu();
 	
 		
 		
