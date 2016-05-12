@@ -27,7 +27,7 @@ public class Commercial extends Reform {
 	}
 
 	@Override
-	public GlobalInterface create() {
+	public static GlobalInterface create() {
 		Commercial output = new Commercial();
 		output.superSet();
 		

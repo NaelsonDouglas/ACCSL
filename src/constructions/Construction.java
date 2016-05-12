@@ -31,7 +31,7 @@ public abstract class Construction implements GlobalInterface {
 	public String toString() {
 		return "Cliente: " + client + "\nLicença: " + license
 				+ "\nInício: " + startDate + "\nFim: " + deadline
-				+ "\nCompleta: " + done;
+				+ "\nCompleta: " + done + "Tipo: ";
 	}
 
 

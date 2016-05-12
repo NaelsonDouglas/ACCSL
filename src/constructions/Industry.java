@@ -32,7 +32,7 @@ public class Industry extends Construction {
 	@Override
 	public String toString() {
 		return super.toString() + "\nTipo: " + type
-				+ "\nEngineer in charge: " + engineerInChargeId + "]";
+				+ "\nEngineer in charge: " + engineerInChargeId;
 	}
 
 	@Override
