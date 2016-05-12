@@ -1,5 +1,7 @@
 package optionals;
 
+import java.util.ArrayList;
+
 public abstract class Optional {
 	String owner;
 
@@ -13,4 +15,6 @@ public abstract class Optional {
 	}
 	
 	public abstract Optional Optional();
+	
+	public abstract void menu(ArrayList<Optional> arrayList);
 }

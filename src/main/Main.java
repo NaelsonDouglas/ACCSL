@@ -2,6 +2,7 @@ package main;
 
 import inspections.Inspection;
 
+import java.io.Console;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -24,13 +25,13 @@ import constructions.Public;
 
 public class Main {
 	
-	static ArrayList<Construction> constructions = new ArrayList<Construction>();
-	static ArrayList<Inspection> inspections = new ArrayList<Inspection>();
-	static ArrayList<Rentail> rentals = new ArrayList<Rentail>();
-	static ArrayList<Optional> optionals = new ArrayList<Optional>();
-	static ArrayList<Payment> payments = new ArrayList<Payment>();
-	static ArrayList<Reform> reforms = new ArrayList<Reform>();
-	static ArrayList<Resource> resources  = new ArrayList<Resource>();
+	public static ArrayList<Construction> constructions = new ArrayList<Construction>();
+	public static ArrayList<Inspection> inspections = new ArrayList<Inspection>();
+	public static ArrayList<Rentail> rentals = new ArrayList<Rentail>();
+	public static ArrayList<Optional> optionals = new ArrayList<Optional>();
+	public static ArrayList<Payment> payments = new ArrayList<Payment>();
+	public static ArrayList<Reform> reforms = new ArrayList<Reform>();
+	public static ArrayList<Resource> resources  = new ArrayList<Resource>();
 	
 	
 	
@@ -70,17 +71,43 @@ public class Main {
 		  resources.add(new resources.Car());
 		  
 		  variabilities = new Object[]{constructions, inspections, rentals, optionals,
-				  payments,reforms, resources};
+				  payments, reforms, resources};
 	    }
 	  
 	  
+	  static void menu() {
+		  
+		  for(int i = 0; i < variabilities.length; i++) {
+			  System.out.println(i + " " + getPackageName(((ArrayList) variabilities[i]).get(0)));
+		  }
+		  
+		  Scanner input = new Scanner(System.in); 
+		  subMenu(input.nextInt());
+		  
+	  }
 	  
+	  
+	  static void subMenu(int selector) {
+		  for(int i = 0; i < ((ArrayList) variabilities[selector]).size(); i++) {
+			  Object sublist = ((ArrayList) variabilities[selector]).get(i);
+			  
+			  System.out.println(i + " " + sublist.getClass().getSimpleName());
+		  }
+		  
+		  Scanner input = new Scanner(System.in);
+		  
+		  int id = input.nextInt();
+		  
+		  ((ArrayList<Optional>) variabilities[selector]).get(id).menu((ArrayList<Optional>) variabilities[selector]);
+	  }
 	
+	  
 	public static void main(String[] args) {
 	
 		createMenu();
-	
-		
+		while(true) {
+			menu();
+		}
 		
 		
 		
