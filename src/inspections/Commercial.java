@@ -22,13 +22,14 @@ public class Commercial extends Inspection{
 		super(address, approved, open, date);
 	}
 	
+	public String toString(){
+		return super.toString() + "\nNoturno: " + atNight + "\nAlvará: " + 
+				governmentPermition;
+	}
 	
 	@Override
 	public inspections.Inspection Inspection() {
 		return new Commercial();
 	}
-	
-	
-	
-	
+		
 }

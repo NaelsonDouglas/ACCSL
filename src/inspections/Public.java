@@ -14,6 +14,10 @@ public class Public extends Inspection{
 	public Public() {
 		super();
 	}
+	
+	public String toString() {
+		return super.toString() + "\nLicitação: " + licitation;
+	}
 
 	@Override
 	public inspections.Inspection Inspection() {

@@ -22,16 +22,15 @@ public class Industry extends Inspection {
 		this.governementPermition = governementPermition;
 	}
 
+	public String toString() {
+		return super.toString() + "\nEngenheiro responsável: " + engineerInCharge +
+				"\nInderditável: " + interditative + "\nAlvará do governo: " + 
+				governementPermition;
+	}
 
 	@Override
 	public inspections.Inspection Inspection() {
 		return new Industry();
 	}
-	
-	
-	
-	
-	
-	
-	
+		
 }

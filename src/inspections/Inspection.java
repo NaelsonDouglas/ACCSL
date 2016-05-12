@@ -21,6 +21,10 @@ public abstract class Inspection {
 		
 	}
 	
+	public String toString() {
+		return "Endereço: " + address + "\nAprovado: " + approved +
+				"\nAberta: " + open + "\nData: " + date;
+	}
 	
 	public abstract Inspection Inspection();
 	
