@@ -72,7 +72,6 @@ public class Main {
 		  resources.add(new resources.Car());
 		  
 		  variabilities = new Object[]{constructions, inspections, rentals, optionals,
-<<<<<<< HEAD
 				  payments,reforms, resources};
 	    }  
 	  
@@ -95,21 +94,8 @@ public class Main {
 	
 	 
 	 
-=======
-				  payments, reforms, resources};
-	    }
 	  
 	  
-	  static void menu() {
-		  
-		  for(int i = 0; i < variabilities.length; i++) {
-			  System.out.println(i + " " + getPackageName(((ArrayList) variabilities[i]).get(0)));
-		  }
-		  
-		  Scanner input = new Scanner(System.in); 
-		  subMenu(input.nextInt());
-		  
-	  }
 	  
 	  
 	  static void subMenu(int selector) {
@@ -125,29 +111,20 @@ public class Main {
 		  
 		  ((ArrayList<Optional>) variabilities[selector]).get(id).menu((ArrayList<Optional>) variabilities[selector]);
 	  }
->>>>>>> 7060f4087dbeddef42ba535fe9f2b27c7c1e1bf0
 	
 	  
 	public static void main(String[] args) {
 	
 		createMenu();
-<<<<<<< HEAD
 		//menu();		
 		//submenu(0);
 		Construction x = new Public("josé", "b", "c", "c", true, "1/1/1", "joão");
 		Construction y = new Residence("João","2342","13/10/2010","25/01/2020",false,"Collor",true,true,"A++");
-=======
 		while(true) {
 			menu();
 		}
->>>>>>> 7060f4087dbeddef42ba535fe9f2b27c7c1e1bf0
 		
 
-		Integer a = 1;
-		if(a instanceof Integer)
-		{
-			System.out.println("meme");
-		}
 			
 	}				
 }
