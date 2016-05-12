@@ -74,35 +74,23 @@ public class Main {
 		  variabilities = new Object[]{constructions, inspections, rentals, optionals,
 				  payments,reforms, resources};
 	    }  
-	  
-	  
-	  
+	  	  
 	  
 	  static void menu() {
 		  for(int i = 0; i < variabilities.length; i++) {
 			  System.out.println("[" + i + "] " + getPackageName(((ArrayList) variabilities[i]).get(0)));
 		  }
-	  }
-	  
-	  static void submenu(int selector){
 		  
-		  for (int i=0; i<((ArrayList<Object>) variabilities[selector]).size(); i++){
-			  Object sublist = ((ArrayList<Construction>) variabilities[selector]).get(i);			  
-			  System.out.println("[" + i + "] " + sublist.getClass().getSimpleName());
-		  }
+		  Scanner input = new Scanner(System.in);
+		  subMenu(input.nextInt());
 	  }
-	
-	 
-	 
-	  
-	  
-	  
+
 	  
 	  static void subMenu(int selector) {
 		  for(int i = 0; i < ((ArrayList) variabilities[selector]).size(); i++) {
 			  Object sublist = ((ArrayList) variabilities[selector]).get(i);
 			  
-			  System.out.println(i + " " + sublist.getClass().getSimpleName());
+			  System.out.println("[" + i + "] " + sublist.getClass().getSimpleName());
 		  }
 		  
 		  Scanner input = new Scanner(System.in);
@@ -120,12 +108,11 @@ public class Main {
 		//submenu(0);
 		Construction x = new Public("josé", "b", "c", "c", true, "1/1/1", "joão");
 		Construction y = new Residence("João","2342","13/10/2010","25/01/2020",false,"Collor",true,true,"A++");
+		
 		while(true) {
 			menu();
 		}
-		
-
-			
+				
 	}				
 }
 
